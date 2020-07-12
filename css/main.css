@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20vw);
+    grid-template-rows: repeat(20vh);
+    grid-template-areas:
+        "header header header header header"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "sidebar main main main main";
+}
+.topbar {
+    grid-area: header;
+    background-color: #000000;
+    text-align: center;
+}
+main {
+    grid-area: main;
+    background-color: grey;
+}
+a {
+    text-decoration-color: white;
+}
+.toplink {
+    padding: 8px 12px;
+    font-size: 40pt;
+    color: #FFFFFF;
+    font-family: 'Nunito', sans-serif;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+#logo {
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translate(-50%);
+}
