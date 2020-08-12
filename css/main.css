@@ -9,9 +9,11 @@ main {
     width: auto;
     height: 100%;
     display: inline-block;
+    background-color: #DCEDF2;
 }
 a {
-    text-decoration-color: white;
+    text-decoration-color: white; /*remove later*/
+    text-decoration: none;
     transition: color 0.5s;
 }
 p {
@@ -33,30 +35,42 @@ p {
 .toplink {
     align-self: center;
     flex: 0 0 auto;
-    padding: 8px 12px;
+    padding: 8px 16px;
     font-size: 36pt;
     color: #FFFFFF;
     font-family: inherit;
+    text-decoration: none;
 }
 .sidebar {
+    flex: 0 0 20%;
+    background-image: linear-gradient(#fff, #f2ced4); /*change to white later*/
     width: 384px;
     height: 100%;
     flex-direction: column;
     display: inline-block;
 }
 .sb-container {
-    padding: 2em 2.25em;
+    
+    padding: 2em 2.5em;
     font-family: inherit;
 }
 .toplink:hover {
-    color: #FFDDDD;
+    color: #e5677c  ;
 }
 .title {
     color: black;
     font-size: 36pt;
 }
+.galtitle {
+    text-align: center;
+    display: block;
+    width: 200px;
+    margin: 120px auto 0px;
+    height: 120px;
+}
 .proj {
-    padding-top: 16px;
+    flex: 0 0 80%;
+    background-image: linear-gradient(#fff, #DCEDF2, #DCEDF2)
 }
 .i1 {
     margin-right: auto;
@@ -69,7 +83,100 @@ p {
     left: 50%;
     transform: translate(-50%);
 }
+.progress {
+    color: black;
+}
+.skinny {
+    display: none;    
+}
+.showcase-grid {
+    width: 100%;
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.showcase-item {
+    margin: 18px 12px;
+    background-color: black;
+    width: 442px;
+    height: 260px;
+    flex: 0 1 auto;
+}
+#wrapper {
+    display: flex;
+    height: 100%;
+}
 
-// redundant {}
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
 
+        min-width: 510px;
+        overflow: visible;
+    }
+    #logo {
+        height: 180px;
+        top: 54px;
+        left: 10%;
+    }
+    .sidebar {
+        width: 100%;
+        display: block;
+    }
+    .topbar {
+        flex-direction: column;
+    }
+    .toplink {
+        font-size: 1.6em;
+        align-self: right;
+        padding: 4px 8px;
+    }
+    .i1 {
+        margin: inherit;
+    }
+    .title {
+        font-size: 24pt;
+    }
+    .progress {
+        padding-left: 108px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    body {
+        min-width: 364px;
+    }
+    .sidebar,.proj {
+        display: none;
+    }
+    .skinny {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: -1;
+        align-content: space-around;
+        align-items: center;
+    }
+    .stext {
+        position: absolute;
+        top: 324px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        font-size: 2.2em;
+    }
+    .topbar {
+        height: 232px;
+    }
+    .toplink {
+        display: none;
+    }
+    #logo {
+        left: 50%;
+        top: 142px;
+        transform: translate(-39px);
+    }
 }
