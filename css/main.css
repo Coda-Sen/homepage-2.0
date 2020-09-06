@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
 }
@@ -9,7 +10,6 @@ main {
     width: auto;
     height: 100%;
     display: inline-block;
-    background-color: #DCEDF2;
 }
 a {
     text-decoration-color: white; /*remove later*/
@@ -43,16 +43,10 @@ p {
 }
 .sidebar {
     flex: 0 0 20%;
-    background-image: linear-gradient(#fff, #f2ced4); /*change to white later*/
     width: 384px;
     height: 100%;
     flex-direction: column;
     display: inline-block;
-}
-.sb-container {
-    
-    padding: 2em 2.5em;
-    font-family: inherit;
 }
 .toplink:hover {
     color: #e5677c  ;
@@ -70,7 +64,7 @@ p {
 }
 .proj {
     flex: 0 0 80%;
-    background-image: linear-gradient(#fff, #DCEDF2, #DCEDF2)
+    background-color: white; 
 }
 .i1 {
     margin-right: auto;
@@ -85,6 +79,7 @@ p {
 }
 .progress {
     color: black;
+    font-size: 28pt;
 }
 .skinny {
     display: none;    
@@ -103,9 +98,87 @@ p {
     height: 260px;
     flex: 0 1 auto;
 }
+.sidenav {
+    width: 0px;
+    height: 100%;
+    padding-top: 60px;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 144px;
+    transition: 500ms cubic-bezier(.27,.04,0,.99);
+    z-index: 1;
+    overflow: hidden;
+}
+#sidenav-button {
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#sidenav-button:hover #top {
+    width: 100%;
+}
+#sidenav-button:hover #mid {
+    width: 100%;
+}
+#sidenav-button:hover > #bot {
+    width: 100%;
+}
+.navlink {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+    display: block;
+}
+.closebtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 28px;
+    margin-left: 50px;
+}
+#top {
+    width: 95%;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 15px;
+    transition: all .6s cubic-bezier(.27,.04,0,.99);
+}
+#mid {
+    width: 20%;
+    height: 5px;
+    background-color: black;
+    transition: all .75s cubic-bezier(.27,.04,0,.99);
+}
+#bot {
+    width: 10%;
+    height: 5px;
+    background-color: black;
+    margin-top: 15px;
+    transition: all .75s cubic-bezier(.27,.04,0,.99);
+}
 #wrapper {
     display: flex;
     height: 100%;
+}
+.masked {
+    mask-image: url(/logo-mask.png);
+    mask-mode: auto;
+    mask-size: 240px 120px;
+    mask-type: alpha;
+    mask-position: inherit;
+}
+.newlogo {
+    background-color: red;
+    height: 240px;
+    width: 120px;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 @media screen and (max-width: 800px) {
@@ -180,3 +253,19 @@ p {
         transform: translate(-39px);
     }
 }
+
+/*colors*/
+.colorful {
+    background:
+      -webkit-linear-gradient(31deg, hsla(60.64, 78.33%, 76.47%, 1) 0%, hsla(60.64, 78.33%, 76.47%, 0) 26%),
+      -webkit-linear-gradient(341deg, hsla(187.92, 86.81%, 50.24%, 1) 0%, hsla(187.92, 86.81%, 50.24%, 0) 31%),
+      -webkit-linear-gradient(65deg, hsla(350, 70.79%, 65.1%, 1) 11%, hsla(350, 70.79%, 65.1%, 0) 63%),
+      -webkit-linear-gradient(169deg, hsla(106.06, 79.2%, 75.49%, 1) 12%, hsla(106.06, 79.2%, 75.49%, 0) 51%),
+      -webkit-linear-gradient(241deg, hsla(193.94, 79.2%, 75.49%, 1) 29%, hsla(193.94, 79.2%, 75.49%, 0) 50%);
+    background:
+      linear-gradient(59deg, hsla(60.64, 78.33%, 76.47%, 1) 0%, hsla(60.64, 78.33%, 76.47%, 0) 26%),
+      linear-gradient(109deg, hsla(187.92, 86.81%, 50.24%, 1) 0%, hsla(187.92, 86.81%, 50.24%, 0) 31%),
+      linear-gradient(25deg, hsla(350, 70.79%, 65.1%, 1) 11%, hsla(350, 70.79%, 65.1%, 0) 63%),
+      linear-gradient(281deg, hsla(106.06, 79.2%, 75.49%, 1) 12%, hsla(106.06, 79.2%, 75.49%, 0) 51%),
+      linear-gradient(209deg, hsla(193.94, 79.2%, 75.49%, 1) 29%, hsla(193.94, 79.2%, 75.49%, 0) 50%);
+    }

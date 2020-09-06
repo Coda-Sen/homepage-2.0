@@ -4,11 +4,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet"> 
     <title>Home // Coda</title>
+    <script src="coda.js"></script>
 </head>
 <body>
     <header>
-        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.24 174.53"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#0f0f0f;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M30,75.85c-11.78.06-18.19-5.85-20-14-1.62-7.1.75-15.11,5-21.9l6,1.55C17,48,15.4,54.61,16.57,59.78c1.22,5.35,5.95,9.42,14.32,9.36,3.41,0,9-.87,15.35-2.33a159.17,159.17,0,0,0,28-9l2,6.54a175.18,175.18,0,0,1-27.8,8.57C40.69,74.69,33.82,75.77,30,75.85Z"/><path class="cls-1" d="M23.94,27.25a118.63,118.63,0,0,1,14-14.44v-.09c-6.86,2.43-22.9,6.47-33.2,8.72-.4-1.75-1.09-4.8-1.57-6.44,2.06-.37,37.77-7.92,52.15-15l2.29,6.66C46.83,10.47,34.84,23.31,30,29.37Z"/><path class="cls-2" d="M13.52,104.92l8-1c.11.85-.82,1.7-1.87,2,.3,3.44.46,7.71.82,12.49a90.5,90.5,0,0,0,20.38-9.07l2.4,5c-6,3.74-14.25,7.13-22.42,9.61.73,18.1,0,36.45-3.23,50.58l-5.94-.81c3.48-13.63,4.51-30.37,3.59-48.27-1.51.42-11.7,2.81-14,3.25L0,123.55c1.24-.2,2.84-.56,4.59-1,.69-.16,8.31-1.88,10.27-2.4C14.55,115.14,14.11,109.66,13.52,104.92Z"/><path class="cls-2" d="M41,143.79l5,.94c-2,3.71-2.59,7-2.06,9.32,1.36,6,7.46,6,19.88,3.24,3.35-.75,6.82-1.7,9.8-2.69l1.35,5.28c-2.92.9-6.09,1.77-9.21,2.48a73.56,73.56,0,0,1-16.18,2.11c-5.75-.3-9.77-3.54-10.82-8.56C38,152.47,38.63,148.38,41,143.79Z"/><path class="cls-2" d="M69.51,117l1.16,5.18a88.84,88.84,0,0,0-25.59,9.37l-2.36-4.41A93.87,93.87,0,0,1,69.51,117Z"/><path class="cls-2" d="M57.36,109,55.09,112A54.8,54.8,0,0,0,42.44,104l2-2.92A58.71,58.71,0,0,1,57.36,109Z"/><path class="cls-2" d="M53.13,93.82A53,53,0,0,1,66,101.69l-2.27,3.07a60.78,60.78,0,0,0-12.54-8Z"/></g></g></svg>
-        <nav class="topbar">
+        <!--<svg id="logo" class="masked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.24 174.53"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#0f0f0f;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M30,75.85c-11.78.06-18.19-5.85-20-14-1.62-7.1.75-15.11,5-21.9l6,1.55C17,48,15.4,54.61,16.57,59.78c1.22,5.35,5.95,9.42,14.32,9.36,3.41,0,9-.87,15.35-2.33a159.17,159.17,0,0,0,28-9l2,6.54a175.18,175.18,0,0,1-27.8,8.57C40.69,74.69,33.82,75.77,30,75.85Z"/><path class="cls-1" d="M23.94,27.25a118.63,118.63,0,0,1,14-14.44v-.09c-6.86,2.43-22.9,6.47-33.2,8.72-.4-1.75-1.09-4.8-1.57-6.44,2.06-.37,37.77-7.92,52.15-15l2.29,6.66C46.83,10.47,34.84,23.31,30,29.37Z"/><path class="cls-2" d="M13.52,104.92l8-1c.11.85-.82,1.7-1.87,2,.3,3.44.46,7.71.82,12.49a90.5,90.5,0,0,0,20.38-9.07l2.4,5c-6,3.74-14.25,7.13-22.42,9.61.73,18.1,0,36.45-3.23,50.58l-5.94-.81c3.48-13.63,4.51-30.37,3.59-48.27-1.51.42-11.7,2.81-14,3.25L0,123.55c1.24-.2,2.84-.56,4.59-1,.69-.16,8.31-1.88,10.27-2.4C14.55,115.14,14.11,109.66,13.52,104.92Z"/><path class="cls-2" d="M41,143.79l5,.94c-2,3.71-2.59,7-2.06,9.32,1.36,6,7.46,6,19.88,3.24,3.35-.75,6.82-1.7,9.8-2.69l1.35,5.28c-2.92.9-6.09,1.77-9.21,2.48a73.56,73.56,0,0,1-16.18,2.11c-5.75-.3-9.77-3.54-10.82-8.56C38,152.47,38.63,148.38,41,143.79Z"/><path class="cls-2" d="M69.51,117l1.16,5.18a88.84,88.84,0,0,0-25.59,9.37l-2.36-4.41A93.87,93.87,0,0,1,69.51,117Z"/><path class="cls-2" d="M57.36,109,55.09,112A54.8,54.8,0,0,0,42.44,104l2-2.92A58.71,58.71,0,0,1,57.36,109Z"/><path class="cls-2" d="M53.13,93.82A53,53,0,0,1,66,101.69l-2.27,3.07a60.78,60.78,0,0,0-12.54-8Z"/></g></g></svg>-->
+        <div class="newlogo colorful masked"></div>
+            <nav class="topbar">
             <a class="toplink i2" href="https://github.com/Coda-Sen">GitHub.</a>
             <a class="toplink i3" href="https://www.linkedin.com/in/xaver-gössinger-a614121a2/">LinkedIn.</a>
             <a class="toplink i4" href="mailto:xaver.goessinger@gmail.com">Contact.</a>
@@ -18,10 +20,16 @@
     <main>
         <div id="wrapper">
             <div class="sidebar">
-                <div class="sb-container">
+                <div onclick="openNav()" id="sidenav-button">
+                    <div id="top"></div>
+                    <div id="mid"></div>
+                    <div id="bot"></div>
+                </div>
+                <div class="sidenav">
                     <p class="title progress">// In Progress.</p>
-                    <a class="title progress" href="">&lt;html&gt;</a>
-                    <a class="title progress" href="">@media</a>
+                    <a href="javascript.void(0)" class="closebtn" onclick="closeNav()">A</a>
+                    <a class="title navlink" href="">&lt;html&gt;</a>
+                    <a class="title navlink" href="">@media</a>
                 </div>
             </div>
             <div class="proj">
