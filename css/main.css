@@ -98,11 +98,10 @@ p {
     height: 260px;
     flex: 0 1 auto;
 }
-.sidenav {
-    width: 0px;
+#sidenav {
     height: 100%;
     padding-top: 60px;
-    background-color: white;
+    background-color: grey;
     position: fixed;
     left: 0;
     top: 144px;
@@ -112,10 +111,15 @@ p {
 }
 #sidenav-button {
     z-index: 2;
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
     margin-left: 20px;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
 }
 #sidenav-button:hover #top {
     width: 100%;
@@ -140,24 +144,20 @@ p {
     font-size: 28px;
     margin-left: 50px;
 }
+.bar {
+    height: 4px;
+    background-color: black;
+}
 #top {
     width: 95%;
-    height: 5px;
-    background-color: black;
-    margin-bottom: 15px;
     transition: all .6s cubic-bezier(.27,.04,0,.99);
 }
 #mid {
     width: 20%;
-    height: 5px;
-    background-color: black;
     transition: all .75s cubic-bezier(.27,.04,0,.99);
 }
 #bot {
     width: 10%;
-    height: 5px;
-    background-color: black;
-    margin-top: 15px;
     transition: all .75s cubic-bezier(.27,.04,0,.99);
 }
 #wrapper {
